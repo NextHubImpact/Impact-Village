@@ -66,13 +66,13 @@ export default function DigitalEmpowermentDetails() {
             </motion.div>
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
               {/* Replace URL with your actual Video Link */}
-              {/* <iframe 
+              <iframe 
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/G7Cfv2FASEo" 
                 title="Impact Village Program Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe> */}
+              ></iframe>
             </div>
           </div>
         </div>
