@@ -6,6 +6,7 @@ import { ArrowLeft, Users, Heart, Lightbulb, TrendingUp, Handshake } from 'lucid
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import RS3 from "@/assets/RS3.jpeg";
 
 export default function CommunityWellBeingDetails() {
   const pillars = [
@@ -32,9 +33,9 @@ export default function CommunityWellBeingDetails() {
   ]
 
   const gallery = [
-    { src: "/community-1.jpg", title: "Mentorship Session" },
-    { src: "/community-2.jpg", title: "Leadership Workshop" },
-    { src: "/community-3.jpg", title: "Community Meeting" },
+    { src: RS3.src, title: "Mentorship Session" },
+    { src: RS3.src, title: "Leadership Workshop" },
+    { src: RS3.src, title: "Community Meeting" },
   ]
 
   return (

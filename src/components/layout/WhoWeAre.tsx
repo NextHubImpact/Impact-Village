@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // import img1 from "@/assets/img1.jpeg";
 import img2 from "@/assets/raf.jpg";
-import img3 from "@/assets/gi.jpeg";
+import img3 from "@/assets/emp.jpg";
 const team = [
   {
     name: "Gideaon Abusah",

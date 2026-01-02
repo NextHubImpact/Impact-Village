@@ -6,6 +6,7 @@ import { ArrowLeft, Laptop, ShieldCheck, Code2, GraduationCap, PlayCircle } from
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import RS3 from "@/assets/RS3.jpeg";
 
 export default function DigitalEmpowermentDetails() {
   const features = [
@@ -33,10 +34,10 @@ export default function DigitalEmpowermentDetails() {
 
   // Add your image paths here
   const galleryImages = [
-    { src: "/program-1.jpg", alt: "Students learning coding", title: "Coding Workshop 2025" },
-    { src: "/program-2.jpg", alt: "Digital literacy class", title: "Rural Outreach Program" },
-    { src: "/program-3.jpg", alt: "Advanced IT training", title: "Youth Tech Summit" },
-    { src: "/program-4.jpg", alt: "Mentorship session", title: "One-on-One Mentoring" },
+    { src: "1", alt: "Students learning coding", title: "Coding Workshop 2025" },
+    { src: "1", alt: "Digital literacy class", title: "Rural Outreach Program" },
+    { src: "1", alt: "Advanced IT training", title: "Youth Tech Summit" },
+    { src: "1", alt: "Mentorship session", title: "One-on-One Mentoring" },
   ]
 
   return (
@@ -46,7 +47,7 @@ export default function DigitalEmpowermentDetails() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-[#05092D] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-[#F4A623] transition-colors mb-8">
+          <Link href="/what-we-do" className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-[#F4A623] transition-colors mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Link>
@@ -91,8 +92,7 @@ export default function DigitalEmpowermentDetails() {
               whileHover={{ scale: 1.03 }}
               className="group relative h-72 rounded-xl overflow-hidden shadow-lg bg-gray-100"
             >
-              <img 
-                src={img.src} 
+              <img src={img.src} 
                 alt={img.alt} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />

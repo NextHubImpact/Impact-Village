@@ -161,7 +161,7 @@ function ImpactPrograms() {
           <p className="mt-2 text-gray-600">
             The curriculum contains contents for all age groups to help build their digital litracy for good.
           </p>
-          <Link href="what-we-do/digital-skills" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
+          <Link href="/digital-skills" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
             Learn More
           </Link>
         </div>
@@ -182,7 +182,7 @@ function ImpactPrograms() {
           <p className="mt-2 text-gray-600">
            Impact Village is working with stakeholders to expand this program to more communities.
           </p>
-          <Link href="what-we-do/community-wellbeing" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
+          <Link href="/community-wellbeing" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
             Learn More
           </Link>
         </div>
@@ -220,7 +220,7 @@ function ImpactPrograms() {
             The curriculum includes Content Creation, Search Engine Optimization
             (SEO), and Internet Security.
           </p> */}
-         <Link href="what-we-do/sustainable" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
+         <Link href="/sustainable" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
             Learn More
           </Link>
         </div>
