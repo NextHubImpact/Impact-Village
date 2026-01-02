@@ -1,8 +1,11 @@
+
+import img3 from "@/assets/RS4.png";
+
 export default function PopularCourses() {
           const courses = [
             {
               title: "Digital Empowerment",
-              image: "https://images.unsplash.com/photo-1653566031285-8e198bca09d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RGlnaXRhbCUyMEVtcG93ZXJtZW50fGVufDB8fDB8fHww",
+              image: img3.src,
               color: "bg-[#05092D]",
             },
             {

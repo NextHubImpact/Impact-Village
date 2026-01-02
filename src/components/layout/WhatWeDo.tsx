@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import img3 from "@/assets/RS2.png";
+import RS3 from "@/assets/RS3.jpeg";
+import Link from 'next/link'
 import {
   Check,
   Users,
@@ -110,7 +113,7 @@ function OurProgramsHeroSection() {
         className="relative h-[600px] bg-cover bg-center flex justify-center items-center text-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1719159381981-1327b22aff9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxhZnJpY2FuJTIwc3R1ZGVudHMlMjBsZWFybmluZ3xlbnwwfHwwfHx8MA%3D%3D')",
+            "url(" + img3.src + ")",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -137,7 +140,7 @@ function ImpactPrograms() {
       {/* Digital Empowerment */}
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
         <img
-          src="https://plus.unsplash.com/premium_photo-1723773631613-a5a6018a1c3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fGFmcmljYW4lMjBzdHVkZW50cyUyMGxlYXJuaW5nfGVufDB8fDB8fHww"
+          src={RS3.src}
           alt="SCILLS Program"
           className="rounded-lg shadow-lg w-full"
         />
@@ -158,9 +161,9 @@ function ImpactPrograms() {
           <p className="mt-2 text-gray-600">
             The curriculum contains contents for all age groups to help build their digital litracy for good.
           </p>
-          <button className="mt-4 px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg">
+          <Link href="what-we-do/digital-skills" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -179,9 +182,9 @@ function ImpactPrograms() {
           <p className="mt-2 text-gray-600">
            Impact Village is working with stakeholders to expand this program to more communities.
           </p>
-          <button className="mt-4 px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg">
+          <Link href="what-we-do/community-wellbeing" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
             Learn More
-          </button>
+          </Link>
         </div>
         <img
           src="https://plus.unsplash.com/premium_photo-1723773631613-a5a6018a1c3a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTN8fGFmcmljYW4lMjBzdHVkZW50cyUyMGxlYXJuaW5nfGVufDB8fDB8fHww"
@@ -217,9 +220,9 @@ function ImpactPrograms() {
             The curriculum includes Content Creation, Search Engine Optimization
             (SEO), and Internet Security.
           </p> */}
-          <button className="mt-4 px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg">
+         <Link href="what-we-do/sustainable" className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-lg mt-4 inline-block">
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
 

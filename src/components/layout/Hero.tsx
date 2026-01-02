@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion'
 import OurValues from '@/components/layout/ourValues'
 import PopularCourses from '@/components/layout/ourPrograms'
+import img3 from "@/assets/RS1.png";
 // import { div } from 'framer-motion/m'
 export default function Hero() {
   return (
@@ -13,7 +14,7 @@ export default function Hero() {
       {/* Hero image background */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80"
+          src={img3.src}
           alt="Team collaboration session"
           className="h-full w-full object-cover object-center"
         />

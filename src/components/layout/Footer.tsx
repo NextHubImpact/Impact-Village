@@ -21,8 +21,8 @@ const navigation = {
   ],
   legal: [
     { name: 'Privacy', href: '/data-privacy' },
-    { name: 'Terms', href: '#' },
-    { name: 'Cookie Policy', href: '#' },
+//     { name: 'Terms', href: '#' },
+//     { name: 'Cookie Policy', href: '#' },
   ],
   social: [
     {
@@ -32,7 +32,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/impactvillagegh/#',
       icon: Instagram,
     },
     {

@@ -76,7 +76,7 @@ export default function DataPrivacyPage() {
 
         <div className="mt-12">
           <Button asChild>
-            <Link href="/#contact">Contact us about privacy</Link>
+            <Link href="/contact-us">Contact us about privacy</Link>
           </Button>
         </div>
       </div>

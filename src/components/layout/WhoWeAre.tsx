@@ -2,22 +2,24 @@
 
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
+// import img1 from "@/assets/img1.jpeg";
+import img2 from "@/assets/raf.jpg";
+import img3 from "@/assets/gi.jpeg";
 const team = [
   {
-    name: "Emma Richards",
-    role: "Founder & CEO",
-    bio: "Emma has over 20 years of experience in organizational transformation and collective impact methodologies.",
+    name: "Gideaon Abusah",
+    role: "Co-founder & Innovation Director",
+    bio: "Gideon has over 4 years of experience in organizational transformation and collective impact methodologies.",
     imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      img3.src,
     initials: "ER",
   },
   {
-    name: "Michael Chen",
-    role: "Co-founder & Innovation Director",
-    bio: "Michael specializes in knowledge-sharing platforms and creating innovative methodologies for sustainable transformation.",
+    name: "Abubakari Abdul Rafik",
+    role: "Co-founder & Digital Facilitator",
+    bio: "Rafik specializes in knowledge-sharing platforms and creating innovative training programs for sustainable transformation.",
     imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      img2.src,
     initials: "MC",
   },
   {

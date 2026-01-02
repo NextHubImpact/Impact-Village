@@ -3,15 +3,39 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, Loader2, Send } from 'lucide-react'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // In a real app, this would send the form data to a server
-    setSubmitted(true)
+    setLoading(true)
+
+    const formData = new FormData(e.currentTarget)
+    // Your verified access key
+    formData.append("access_key", "6c45f726-701d-44e7-b6a6-91388a83f318")
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("Network error. Please check your connection.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -29,6 +53,7 @@ export default function Contact() {
         </div>
 
         <div className="mx-auto mt-16 grid max-w-8xl grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+          {/* Left Side: Contact Details */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +101,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-base font-medium text-gray-900">Address</h4>
                   <p className="mt-1 text-sm text-gray-600">
-                  Ghana, Kasoa Street, <br />
+                    Ghana, Kasoa Street, <br />
                     New Market Road
                   </p>
                 </div>
@@ -84,6 +109,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
+          {/* Right Side: Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -98,82 +124,71 @@ export default function Contact() {
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-gray-900">Thank you for your message!</h3>
                 <p className="mt-2 text-sm text-gray-600">We've received your inquiry and will get back to you as soon as possible.</p>
-                <Button
-                  className="mt-6"
-                  onClick={() => setSubmitted(false)}
-                >
+                <Button className="mt-6 bg-[#05092D]" onClick={() => setSubmitted(false)}>
                   Send another message
                 </Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                    Name
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                   <div className="mt-1">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      required
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-violet-500 focus:ring-violet-500 bg-white border"
-                    />
+                    <input type="text" name="name" id="name" required className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-[#F4A623] focus:ring-[#F4A623] bg-white border" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                    <div className="mt-1">
+                      <input type="email" name="email" id="email" required className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-[#F4A623] focus:ring-[#F4A623] bg-white border" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="organization" className="block text-sm font-medium text-gray-700">Organization</label>
+                    <div className="mt-1">
+                      <input type="text" name="organization" id="organization" className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-[#F4A623] focus:ring-[#F4A623] bg-white border" />
+                    </div>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email
-                  </label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Inquiry Type</label>
                   <div className="mt-1">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      required
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-violet-500 focus:ring-violet-500 bg-white border"
-                    />
+                    <select 
+                      name="subject" 
+                      id="subject" 
+                      required 
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-[#F4A623] focus:ring-[#F4A623] bg-white border"
+                    >
+                      <option value="">Select an option...</option>
+                      <option value="Digital Empowerment Enrollment">Digital Empowerment Enrollment</option>
+                      <option value="Community Well-being/Mentorship">Community Well-being & Mentorship</option>
+                      <option value="Sustainable Impact/Strategic Partnership">Strategic Partnership Inquiry</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                    </select>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="organization" className="block text-sm font-medium text-gray-700">
-                    Organization
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                   <div className="mt-1">
-                    <input
-                      type="text"
-                      name="organization"
-                      id="organization"
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-violet-500 focus:ring-violet-500 bg-white border"
-                    />
+                    <textarea name="message" id="message" rows={4} required className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-[#F4A623] focus:ring-[#F4A623] bg-white border" />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                    Message
-                  </label>
-                  <div className="mt-1">
-                    <textarea
-                      name="message"
-                      id="message"
-                      rows={4}
-                      required
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-violet-500 focus:ring-violet-500 bg-white border"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <Button type="submit" className="w-full rounded-md bg-[#05092D] text-white hover:bg-yellow-500 ">
-                    Send message
+                  <Button 
+                    type="submit" 
+                    disabled={loading}
+                    className="w-full rounded-md bg-[#05092D] text-white hover:bg-[#F4A623] flex items-center justify-center gap-2 py-6 text-lg transition-all"
+                  >
+                    {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
+                    {loading ? "Sending..." : "Send message"}
                   </Button>
                 </div>
-                <p className="text-xs text-gray-500">
-                  By submitting this form, you agree to our <a href="#" className="text-violet-600 hover:text-violet-500">privacy policy</a>.
-                </p>
               </form>
             )}
           </motion.div>

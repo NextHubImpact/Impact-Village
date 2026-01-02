@@ -84,12 +84,14 @@ export default function Navbar() {
                     ))}
                   </div>
                   <div className="py-6">
-                    <Button
+                    <Link href="/contact-us">
+                     <Button
                       className="w-full"
                       onClick={() => setIsOpen(false)}
                     >
                       Let's talk
-                    </Button>
+                    </Button></Link>
+                   
                   </div>
                 </div>
               </div>
@@ -110,7 +112,13 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
-          <Button className="rounded-md bg-[#05092D] text-white hover:bg-yellow-500">Let's talk</Button>
+          {/* <Button className="rounded-md bg-[#05092D] text-white hover:bg-yellow-500">Let's talk</Button>
+           */}
+           <Button asChild className="rounded-md bg-[#05092D] text-white hover:bg-yellow-500">
+  <Link href="/contact-us">
+    Let's talk
+  </Link>
+</Button>
         </div>
       </nav>
     </header>
