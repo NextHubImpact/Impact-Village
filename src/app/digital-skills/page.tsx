@@ -34,10 +34,10 @@ export default function DigitalEmpowermentDetails() {
 
   // Add your image paths here
   const galleryImages = [
-    { src: "1", alt: "Students learning coding", title: "Coding Workshop 2025" },
-    { src: "1", alt: "Digital literacy class", title: "Rural Outreach Program" },
-    { src: "1", alt: "Advanced IT training", title: "Youth Tech Summit" },
-    { src: "1", alt: "Mentorship session", title: "One-on-One Mentoring" },
+    { src: RS3.src, alt: "Students learning coding", title: "Coding Workshop 2025" },
+    { src: "", alt: "Digital literacy class", title: "Rural Outreach Program" },
+    { src: "", alt: "Advanced IT training", title: "Youth Tech Summit" },
+    { src: "", alt: "Mentorship session", title: "One-on-One Mentoring" },
   ]
 
   return (
