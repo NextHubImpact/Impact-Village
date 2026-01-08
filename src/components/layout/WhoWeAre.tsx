@@ -3,41 +3,45 @@
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // import img1 from "@/assets/img1.jpeg";
-import img2 from "@/assets/raf.jpg";
-import img3 from "@/assets/emp.jpg";
+import raf from "@/assets/raf.png";
+import queen from "@/assets/queen.png";
+import ebusua from "@/assets/ebusua.png";
+import kito from "@/assets/kito.png";
 const team = [
-  {
-    name: "Gideaon Abusah",
+           {
+    name: "Naakye Aku Shika II",
+    role: "Patron",
+    bio: "Naakye Aku Shika II - Queen Mother of OdupongKpehe (Kasoa) provides cultural leadership and advocacy, strengthening community trust and youth empowerment.",
+    imageUrl:
+      queen.src,
+    initials: "SJ",
+  },
+    {
+    name: "Gideon Abusah",
     role: "Co-founder & Innovation Director",
     bio: "Gideon has over 4 years of experience in organizational transformation and collective impact methodologies.",
     imageUrl:
-      img3.src,
+      kito.src,
     initials: "ER",
   },
+  {
+    name: "Kwame Opandoh",
+    role: "Head of Partnerships & Stakeholder Engagement",
+    bio: "Mr Kwame Opandoh has leads strategic partnerships and stakeholder engagement to scale Impact Village’s impact.",
+    imageUrl:
+      ebusua.src,
+    initials: "DN",
+  },
+
   {
     name: "Abubakari Abdul Rafik",
     role: "Co-founder & Digital Facilitator",
     bio: "Rafik specializes in knowledge-sharing platforms and creating innovative training programs for sustainable transformation.",
     imageUrl:
-      img2.src,
+      raf.src,
     initials: "MC",
-  },
-  {
-    name: "Sarah Johnson",
-    role: "Head of Facilitation",
-    bio: "Sarah is an expert facilitator with a background in conflict resolution and collaborative decision-making.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    initials: "SJ",
-  },
-  {
-    name: "David Nguyen",
-    role: "Senior Coach",
-    bio: "David has coached executives and teams across 15+ countries, specializing in sustainability and purpose-driven leadership.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    initials: "DN",
-  },
+  }
+ 
 ];
 
 const containerVariants = {
